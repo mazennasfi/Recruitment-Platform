@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Mazen!{% endblock %}</title>
+        <link rel="stylesheet" href =https://bootswatch.com/4/lux/bootstrap.min.css>
+        {% block stylesheets %}{% endblock %}
+        
+    </head>
+    <body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">Stage-Ing</a>
+         {% if app.user %}
+         <a style="color:white; " class="navbar-link" href="{{path('security_logout')}}">Deconnexion</a>
+        {% endif %}
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+      
+</nav> 
+
+        <H1>Stage-Ing<H1>
+        <div class="form-group">
+        <p> Connecting students,<br> industries and researchers... </p>
+        </div>
+        <center>
+
+        <div class="form-group">
+        <button>
+         <a class="navbar-link" href="{{path('blog1')}}">I'AM A STUDENT <span class="sr-only">(current)</span></a>
+         </button>
+         </div>
+         </center>
+         <center>
+         <div class="form-group">
+         <button>
+         <a class="navbar-link" href="{{path('blog')}}">I'AM A RECRUITER<span class="sr-only">(current)</span></a>
+        </button>
+        </div>
+        </center>
+        
+    </body>
+</html>
